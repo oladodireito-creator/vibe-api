@@ -1,12 +1,12 @@
 import { Router } from "express";
+import { getUsers, createUser } from "../controllers/userController.js";
 
 const router = Router();
 
-// Rota de teste da Vibe Seven
-router.get("/users", (req, res) => {
-  res.json({
-    message: "Rota de usuários funcionando!"
-  });
-});
+// Listar usuários
+router.get("/users", getUsers);
+
+// Criar um novo usuário
+router.post("/users", createUser);
 
 export default router;
