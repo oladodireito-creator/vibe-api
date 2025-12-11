@@ -1,7 +1,8 @@
-
 import express from "express";
 import userRoutes from "./routes/userRoutes.js";
-
+import express from "express";
+import userRoutes from "./routes/userRoutes.js";
+import { connectDB } from "./database/db.js";
 const app = express();
 app.use(express.json());
 
